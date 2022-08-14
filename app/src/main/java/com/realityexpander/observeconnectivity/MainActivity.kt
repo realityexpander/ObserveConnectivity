@@ -27,6 +27,7 @@ class MainActivity : ComponentActivity() {
         // non-compose way
         connectivityObserver.observe().onEach {
             println("Connectivity changed: $it")
+            // send message to the viewModel here
         }.launchIn(lifecycleScope)
 
         setContent {
