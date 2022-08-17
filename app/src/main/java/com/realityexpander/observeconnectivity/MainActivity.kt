@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ObserveConnectivityTheme {
 
-                val status by connectivityObserver.observe().collectAsState(
+                val status by connectivityObserver.observe().collectAsState(  // connectivityObserver is a flow
                     initial = ConnectivityObserver.Status.Unavailable
                 )
 
